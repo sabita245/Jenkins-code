@@ -1,0 +1,15 @@
+---
+
+ - name: This playbook will create an user
+   hosts: webservers
+
+   tasks:
+           - name: This task will createa user named jenkin
+             user:
+                     name: jenkin
+                     uid: 4000
+                     groups: root
+                     shell: /bin/bash
+                     state: present
+                     comment: 'this user is created by ansible'
+
