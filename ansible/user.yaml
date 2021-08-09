@@ -1,0 +1,26 @@
+---
+ - name: This playbook will create an user
+   hosts: all
+   vars:
+           git_dir: /opt/user.git
+
+   tasks:
+           - name: To create an user named jenkin
+             user:
+                     name: k8s
+                     uid: 6000
+                     groups: root
+                     shell: /bin/bash
+                     state: present
+           - name: clone the git repo
+             git:
+                     repo: 'https://github.com/sabita245/ansible-code.git'
+                     dest: '{{ git_dir }}'
+                     clone: yes
+                     update: yes
+           - name: add alternative remote
+             ini_file: dest={{ git_dir }}/.git/config section='remote \"mirrored\"' option=url value='git@gitlab.com:exemple/user-mirror.git'
+             tags: configuration
+           - name: push the repo to alternate remote
+             shell: 'git --verbose --git-dir={{ git_dir }}/.git push origin master'         
+

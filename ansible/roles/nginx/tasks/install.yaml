@@ -1,0 +1,4 @@
+---
+- name: install nginx
+  become_user: root
+  apt: name=nginx state=latest

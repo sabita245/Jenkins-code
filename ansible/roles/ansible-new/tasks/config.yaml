@@ -1,0 +1,5 @@
+---
+
+ - name: copying html
+   become_user: root
+   copy: src=index.html dest=/var/www/html

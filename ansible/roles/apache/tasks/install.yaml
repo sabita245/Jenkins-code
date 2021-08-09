@@ -1,0 +1,5 @@
+---
+
+- name: install apache
+  become_user: root
+  apt: name=apache2 state=latest

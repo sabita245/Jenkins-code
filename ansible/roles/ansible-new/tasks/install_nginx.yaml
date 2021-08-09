@@ -1,0 +1,5 @@
+---
+
+ - name: install nginx on server2
+   apt: name=nginx state=latest
+ 

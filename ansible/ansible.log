@@ -1,0 +1,295 @@
+2021-08-07 00:38:30,032 p=1353 u=root n=ansible | [DEPRECATION WARNING]: Distribution Ubuntu 18.04 on host nginx should use 
+/usr/bin/python3, but is using /usr/bin/python for backward compatibility with 
+prior Ansible releases. A future Ansible release will default to using the 
+discovered platform python for this host. See https://docs.ansible.com/ansible/
+2.9/reference_appendices/interpreter_discovery.html for more information. This 
+feature will be removed in version 2.12. Deprecation warnings can be disabled 
+by setting deprecation_warnings=False in ansible.cfg.
+2021-08-07 00:38:30,037 p=1353 u=root n=ansible | nginx | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2021-08-07 00:38:30,050 p=1353 u=root n=ansible | apache | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2021-08-07 00:38:42,301 p=1402 u=root n=ansible | [DEPRECATION WARNING]: Distribution Ubuntu 18.04 on host nginx should use 
+/usr/bin/python3, but is using /usr/bin/python for backward compatibility with 
+prior Ansible releases. A future Ansible release will default to using the 
+discovered platform python for this host. See https://docs.ansible.com/ansible/
+2.9/reference_appendices/interpreter_discovery.html for more information. This 
+feature will be removed in version 2.12. Deprecation warnings can be disabled 
+by setting deprecation_warnings=False in ansible.cfg.
+2021-08-07 00:38:42,302 p=1402 u=root n=ansible | nginx | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2021-08-07 00:38:42,382 p=1402 u=root n=ansible | apache | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2021-08-07 00:46:27,773 p=1519 u=root n=ansible | PLAY [nginx] *******************************************************************
+2021-08-07 00:46:27,787 p=1519 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2021-08-07 00:46:29,483 p=1519 u=root n=ansible | [DEPRECATION WARNING]: Distribution Ubuntu 18.04 on host nginx should use 
+/usr/bin/python3, but is using /usr/bin/python for backward compatibility with 
+prior Ansible releases. A future Ansible release will default to using the 
+discovered platform python for this host. See https://docs.ansible.com/ansible/
+2.9/reference_appendices/interpreter_discovery.html for more information. This 
+feature will be removed in version 2.12. Deprecation warnings can be disabled 
+by setting deprecation_warnings=False in ansible.cfg.
+2021-08-07 00:46:29,483 p=1519 u=root n=ansible | ok: [nginx]
+2021-08-07 00:46:29,495 p=1519 u=root n=ansible | TASK [install nginx] ***********************************************************
+2021-08-07 00:46:30,621 p=1519 u=root n=ansible | ok: [nginx]
+2021-08-07 00:46:30,634 p=1519 u=root n=ansible | TASK [nginx : configuration] ***************************************************
+2021-08-07 00:46:31,275 p=1519 u=root n=ansible | ok: [nginx]
+2021-08-07 00:46:31,287 p=1519 u=root n=ansible | TASK [nginx : start service] ***************************************************
+2021-08-07 00:46:31,865 p=1519 u=root n=ansible | ok: [nginx]
+2021-08-07 00:46:31,869 p=1519 u=root n=ansible | PLAY RECAP *********************************************************************
+2021-08-07 00:46:31,869 p=1519 u=root n=ansible | nginx                      : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-08-07 00:46:55,552 p=1572 u=root n=ansible | PLAY [apache] ******************************************************************
+2021-08-07 00:46:55,565 p=1572 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2021-08-07 00:46:57,228 p=1572 u=root n=ansible | ok: [apache]
+2021-08-07 00:46:57,239 p=1572 u=root n=ansible | TASK [install apache] **********************************************************
+2021-08-07 00:46:58,457 p=1572 u=root n=ansible | ok: [apache]
+2021-08-07 00:46:58,469 p=1572 u=root n=ansible | TASK [apache : copying html] ***************************************************
+2021-08-07 00:46:59,232 p=1572 u=root n=ansible | ok: [apache]
+2021-08-07 00:46:59,244 p=1572 u=root n=ansible | TASK [apache : start service] **************************************************
+2021-08-07 00:46:59,999 p=1572 u=root n=ansible | fatal: [apache]: FAILED! => {"changed": false, "msg": "Unable to start service apache2: Job for apache2.service failed because the control process exited with error code.\nSee \"systemctl status apache2.service\" and \"journalctl -xe\" for details.\n"}
+2021-08-07 00:47:00,002 p=1572 u=root n=ansible | PLAY RECAP *********************************************************************
+2021-08-07 00:47:00,002 p=1572 u=root n=ansible | apache                     : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-08-07 00:48:57,626 p=1678 u=root n=ansible | PLAY [apache] ******************************************************************
+2021-08-07 00:48:57,640 p=1678 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2021-08-07 00:48:59,306 p=1678 u=root n=ansible | ok: [apache]
+2021-08-07 00:48:59,317 p=1678 u=root n=ansible | TASK [install apache] **********************************************************
+2021-08-07 00:49:00,603 p=1678 u=root n=ansible | ok: [apache]
+2021-08-07 00:49:00,614 p=1678 u=root n=ansible | TASK [apache : copying html] ***************************************************
+2021-08-07 00:49:01,354 p=1678 u=root n=ansible | ok: [apache]
+2021-08-07 00:49:01,366 p=1678 u=root n=ansible | TASK [apache : start service] **************************************************
+2021-08-07 00:49:02,124 p=1678 u=root n=ansible | fatal: [apache]: FAILED! => {"changed": false, "msg": "Unable to start service apache2: Job for apache2.service failed because the control process exited with error code.\nSee \"systemctl status apache2.service\" and \"journalctl -xe\" for details.\n"}
+2021-08-07 00:49:02,127 p=1678 u=root n=ansible | PLAY RECAP *********************************************************************
+2021-08-07 00:49:02,128 p=1678 u=root n=ansible | apache                     : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-08-07 00:50:48,612 p=1735 u=root n=ansible | PLAY [apache] ******************************************************************
+2021-08-07 00:50:48,625 p=1735 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2021-08-07 00:50:50,310 p=1735 u=root n=ansible | ok: [apache]
+2021-08-07 00:50:50,321 p=1735 u=root n=ansible | TASK [install apache] **********************************************************
+2021-08-07 00:50:51,559 p=1735 u=root n=ansible | ok: [apache]
+2021-08-07 00:50:51,571 p=1735 u=root n=ansible | TASK [apache : copying html] ***************************************************
+2021-08-07 00:50:52,322 p=1735 u=root n=ansible | ok: [apache]
+2021-08-07 00:50:52,335 p=1735 u=root n=ansible | TASK [apache : start service] **************************************************
+2021-08-07 00:50:53,089 p=1735 u=root n=ansible | fatal: [apache]: FAILED! => {"changed": false, "msg": "Unable to start service apache2: Job for apache2.service failed because the control process exited with error code.\nSee \"systemctl status apache2.service\" and \"journalctl -xe\" for details.\n"}
+2021-08-07 00:50:53,092 p=1735 u=root n=ansible | PLAY RECAP *********************************************************************
+2021-08-07 00:50:53,092 p=1735 u=root n=ansible | apache                     : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-08-07 00:55:51,829 p=1798 u=root n=ansible | PLAY [apache] ******************************************************************
+2021-08-07 00:55:51,843 p=1798 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2021-08-07 00:55:53,503 p=1798 u=root n=ansible | ok: [apache]
+2021-08-07 00:55:53,514 p=1798 u=root n=ansible | TASK [install apache] **********************************************************
+2021-08-07 00:55:54,733 p=1798 u=root n=ansible | ok: [apache]
+2021-08-07 00:55:54,745 p=1798 u=root n=ansible | TASK [apache : copying html] ***************************************************
+2021-08-07 00:55:55,490 p=1798 u=root n=ansible | ok: [apache]
+2021-08-07 00:55:55,502 p=1798 u=root n=ansible | TASK [apache : start service] **************************************************
+2021-08-07 00:55:56,250 p=1798 u=root n=ansible | fatal: [apache]: FAILED! => {"changed": false, "msg": "Unable to start service apache2: Job for apache2.service failed because the control process exited with error code.\nSee \"systemctl status apache2.service\" and \"journalctl -xe\" for details.\n"}
+2021-08-07 00:55:56,253 p=1798 u=root n=ansible | PLAY RECAP *********************************************************************
+2021-08-07 00:55:56,253 p=1798 u=root n=ansible | apache                     : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-08-07 00:57:22,593 p=1853 u=root n=ansible | PLAY [apache] ******************************************************************
+2021-08-07 00:57:22,607 p=1853 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2021-08-07 00:57:24,282 p=1853 u=root n=ansible | ok: [apache]
+2021-08-07 00:57:24,293 p=1853 u=root n=ansible | TASK [install apache] **********************************************************
+2021-08-07 00:57:25,525 p=1853 u=root n=ansible | ok: [apache]
+2021-08-07 00:57:25,537 p=1853 u=root n=ansible | TASK [apache : copying html] ***************************************************
+2021-08-07 00:57:26,290 p=1853 u=root n=ansible | ok: [apache]
+2021-08-07 00:57:26,302 p=1853 u=root n=ansible | TASK [apache : start service] **************************************************
+2021-08-07 00:57:27,060 p=1853 u=root n=ansible | fatal: [apache]: FAILED! => {"changed": false, "msg": "Unable to start service apache2: Job for apache2.service failed because the control process exited with error code.\nSee \"systemctl status apache2.service\" and \"journalctl -xe\" for details.\n"}
+2021-08-07 00:57:27,063 p=1853 u=root n=ansible | PLAY RECAP *********************************************************************
+2021-08-07 00:57:27,063 p=1853 u=root n=ansible | apache                     : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-08-07 00:58:51,241 p=1911 u=root n=ansible | ERROR! A malformed role declaration was encountered.
+
+The error appears to be in '/etc/ansible/play1.yaml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- hosts: apache
+  ^ here
+
+2021-08-07 01:00:09,672 p=1922 u=root n=ansible | ERROR! A malformed role declaration was encountered.
+
+The error appears to be in '/etc/ansible/play1.yaml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- hosts: apache
+  ^ here
+
+2021-08-07 01:01:03,891 p=1932 u=root n=ansible | ERROR! A malformed role declaration was encountered.
+
+The error appears to be in '/etc/ansible/play1.yaml': line 2, column 4, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+ - hosts: apache
+   ^ here
+
+2021-08-07 01:03:40,523 p=1943 u=root n=ansible | PLAY [apache] ******************************************************************
+2021-08-07 01:03:40,536 p=1943 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2021-08-07 01:03:42,236 p=1943 u=root n=ansible | ok: [apache]
+2021-08-07 01:03:42,247 p=1943 u=root n=ansible | TASK [install apache] **********************************************************
+2021-08-07 01:03:43,479 p=1943 u=root n=ansible | ok: [apache]
+2021-08-07 01:03:43,491 p=1943 u=root n=ansible | TASK [apache : copying html] ***************************************************
+2021-08-07 01:03:44,242 p=1943 u=root n=ansible | ok: [apache]
+2021-08-07 01:03:44,255 p=1943 u=root n=ansible | TASK [apache : start service] **************************************************
+2021-08-07 01:03:45,015 p=1943 u=root n=ansible | fatal: [apache]: FAILED! => {"changed": false, "msg": "Unable to start service apache2: Job for apache2.service failed because the control process exited with error code.\nSee \"systemctl status apache2.service\" and \"journalctl -xe\" for details.\n"}
+2021-08-07 01:03:45,019 p=1943 u=root n=ansible | PLAY RECAP *********************************************************************
+2021-08-07 01:03:45,019 p=1943 u=root n=ansible | apache                     : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-08-07 01:05:49,631 p=2032 u=root n=ansible | PLAY [apache] ******************************************************************
+2021-08-07 01:05:49,644 p=2032 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2021-08-07 01:05:51,325 p=2032 u=root n=ansible | ok: [apache]
+2021-08-07 01:05:51,336 p=2032 u=root n=ansible | TASK [install apache] **********************************************************
+2021-08-07 01:05:52,576 p=2032 u=root n=ansible | ok: [apache]
+2021-08-07 01:05:52,588 p=2032 u=root n=ansible | TASK [apache : copying html] ***************************************************
+2021-08-07 01:05:53,353 p=2032 u=root n=ansible | changed: [apache]
+2021-08-07 01:05:53,365 p=2032 u=root n=ansible | TASK [apache : start service] **************************************************
+2021-08-07 01:05:54,128 p=2032 u=root n=ansible | fatal: [apache]: FAILED! => {"changed": false, "msg": "Unable to start service apache2: Job for apache2.service failed because the control process exited with error code.\nSee \"systemctl status apache2.service\" and \"journalctl -xe\" for details.\n"}
+2021-08-07 01:05:54,131 p=2032 u=root n=ansible | PLAY RECAP *********************************************************************
+2021-08-07 01:05:54,132 p=2032 u=root n=ansible | apache                     : ok=3    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-08-07 01:08:23,756 p=2101 u=root n=ansible | PLAY [apache] ******************************************************************
+2021-08-07 01:08:23,769 p=2101 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2021-08-07 01:08:25,432 p=2101 u=root n=ansible | ok: [apache]
+2021-08-07 01:08:25,443 p=2101 u=root n=ansible | TASK [install apache] **********************************************************
+2021-08-07 01:08:26,651 p=2101 u=root n=ansible | ok: [apache]
+2021-08-07 01:08:26,663 p=2101 u=root n=ansible | TASK [apache : copying html] ***************************************************
+2021-08-07 01:08:27,415 p=2101 u=root n=ansible | ok: [apache]
+2021-08-07 01:08:27,428 p=2101 u=root n=ansible | TASK [apache : start service] **************************************************
+2021-08-07 01:08:28,194 p=2101 u=root n=ansible | fatal: [apache]: FAILED! => {"changed": false, "msg": "Unable to start service apache2: Job for apache2.service failed because the control process exited with error code.\nSee \"systemctl status apache2.service\" and \"journalctl -xe\" for details.\n"}
+2021-08-07 01:08:28,197 p=2101 u=root n=ansible | PLAY RECAP *********************************************************************
+2021-08-07 01:08:28,197 p=2101 u=root n=ansible | apache                     : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-08-07 01:15:58,865 p=2176 u=root n=ansible | playbook: user.yaml
+2021-08-07 01:20:10,161 p=2199 u=root n=ansible | playbook: user.yaml
+2021-08-07 01:27:41,439 p=2214 u=root n=ansible | playbook: user.yaml
+2021-08-07 01:27:50,592 p=2220 u=root n=ansible | PLAY [This playbook will create an user] **************************************************************
+2021-08-07 01:27:50,603 p=2220 u=root n=ansible | TASK [Gathering Facts] ********************************************************************************
+2021-08-07 01:27:52,200 p=2220 u=root n=ansible | [DEPRECATION WARNING]: Distribution Ubuntu 18.04 on host nginx should use /usr/bin/python3, but is 
+using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release
+ will default to using the discovered platform python for this host. See 
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more 
+information. This feature will be removed in version 2.12. Deprecation warnings can be disabled by 
+setting deprecation_warnings=False in ansible.cfg.
+2021-08-07 01:27:52,200 p=2220 u=root n=ansible | ok: [nginx]
+2021-08-07 01:27:52,324 p=2220 u=root n=ansible | ok: [apache]
+2021-08-07 01:27:52,334 p=2220 u=root n=ansible | TASK [To create an user named jenkin] *****************************************************************
+2021-08-07 01:27:52,901 p=2220 u=root n=ansible | fatal: [nginx]: FAILED! => {"changed": false, "msg": "useradd: UID 4001 is not unique\n", "name": "jenkin1", "rc": 4}
+2021-08-07 01:27:52,972 p=2220 u=root n=ansible | fatal: [apache]: FAILED! => {"changed": false, "msg": "useradd: UID 4001 is not unique\n", "name": "jenkin1", "rc": 4}
+2021-08-07 01:27:52,974 p=2220 u=root n=ansible | PLAY RECAP ********************************************************************************************
+2021-08-07 01:27:52,974 p=2220 u=root n=ansible | apache                     : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-08-07 01:27:52,975 p=2220 u=root n=ansible | nginx                      : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-08-07 01:28:52,554 p=2276 u=root n=ansible | PLAY [This playbook will create an user] **************************************************************
+2021-08-07 01:28:52,565 p=2276 u=root n=ansible | TASK [Gathering Facts] ********************************************************************************
+2021-08-07 01:28:54,195 p=2276 u=root n=ansible | [DEPRECATION WARNING]: Distribution Ubuntu 18.04 on host nginx should use /usr/bin/python3, but is 
+using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release
+ will default to using the discovered platform python for this host. See 
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more 
+information. This feature will be removed in version 2.12. Deprecation warnings can be disabled by 
+setting deprecation_warnings=False in ansible.cfg.
+2021-08-07 01:28:54,195 p=2276 u=root n=ansible | ok: [nginx]
+2021-08-07 01:28:54,340 p=2276 u=root n=ansible | ok: [apache]
+2021-08-07 01:28:54,368 p=2276 u=root n=ansible | TASK [To create an user named jenkin] *****************************************************************
+2021-08-07 01:28:54,830 p=2276 u=root n=ansible | fatal: [nginx]: FAILED! => {"changed": false, "msg": "useradd: UID 4000 is not unique\n", "name": "jenkin1", "rc": 4}
+2021-08-07 01:28:54,901 p=2276 u=root n=ansible | fatal: [apache]: FAILED! => {"changed": false, "msg": "useradd: UID 4000 is not unique\n", "name": "jenkin1", "rc": 4}
+2021-08-07 01:28:54,904 p=2276 u=root n=ansible | PLAY RECAP ********************************************************************************************
+2021-08-07 01:28:54,905 p=2276 u=root n=ansible | apache                     : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-08-07 01:28:54,905 p=2276 u=root n=ansible | nginx                      : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-08-07 01:30:12,423 p=2336 u=root n=ansible | PLAY [This playbook will create an user] **************************************************************
+2021-08-07 01:30:12,434 p=2336 u=root n=ansible | TASK [Gathering Facts] ********************************************************************************
+2021-08-07 01:30:14,082 p=2336 u=root n=ansible | [DEPRECATION WARNING]: Distribution Ubuntu 18.04 on host nginx should use /usr/bin/python3, but is 
+using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release
+ will default to using the discovered platform python for this host. See 
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more 
+information. This feature will be removed in version 2.12. Deprecation warnings can be disabled by 
+setting deprecation_warnings=False in ansible.cfg.
+2021-08-07 01:30:14,082 p=2336 u=root n=ansible | ok: [nginx]
+2021-08-07 01:30:14,180 p=2336 u=root n=ansible | ok: [apache]
+2021-08-07 01:30:14,190 p=2336 u=root n=ansible | TASK [To create an user named jenkin] *****************************************************************
+2021-08-07 01:30:14,776 p=2336 u=root n=ansible | changed: [nginx]
+2021-08-07 01:30:14,854 p=2336 u=root n=ansible | changed: [apache]
+2021-08-07 01:30:14,865 p=2336 u=root n=ansible | TASK [clone the git repo] *****************************************************************************
+2021-08-07 01:30:15,696 p=2336 u=root n=ansible | changed: [apache]
+2021-08-07 01:30:15,723 p=2336 u=root n=ansible | changed: [nginx]
+2021-08-07 01:30:15,734 p=2336 u=root n=ansible | TASK [add alternative remote] *************************************************************************
+2021-08-07 01:30:16,132 p=2336 u=root n=ansible | changed: [nginx]
+2021-08-07 01:30:16,202 p=2336 u=root n=ansible | changed: [apache]
+2021-08-07 01:30:16,214 p=2336 u=root n=ansible | TASK [push the repo to alternate remote] **************************************************************
+2021-08-07 01:30:16,618 p=2336 u=root n=ansible | fatal: [nginx]: FAILED! => {"changed": true, "cmd": "git --verbose --git-dir=/opt/user.git/.git push mirrored HEAD", "delta": "0:00:00.003837", "end": "2021-08-07 01:30:16.593599", "msg": "non-zero return code", "rc": 129, "start": "2021-08-07 01:30:16.589762", "stderr": "unknown option: --verbose\nusage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]", "stderr_lines": ["unknown option: --verbose", "usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]", "           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]", "           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]", "           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]", "           <command> [<args>]"], "stdout": "", "stdout_lines": []}
+2021-08-07 01:30:16,678 p=2336 u=root n=ansible | fatal: [apache]: FAILED! => {"changed": true, "cmd": "git --verbose --git-dir=/opt/user.git/.git push mirrored HEAD", "delta": "0:00:00.003365", "end": "2021-08-07 01:30:16.646489", "msg": "non-zero return code", "rc": 129, "start": "2021-08-07 01:30:16.643124", "stderr": "unknown option: --verbose\nusage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]", "stderr_lines": ["unknown option: --verbose", "usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]", "           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]", "           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]", "           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]", "           <command> [<args>]"], "stdout": "", "stdout_lines": []}
+2021-08-07 01:30:16,681 p=2336 u=root n=ansible | PLAY RECAP ********************************************************************************************
+2021-08-07 01:30:16,681 p=2336 u=root n=ansible | apache                     : ok=4    changed=3    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-08-07 01:30:16,681 p=2336 u=root n=ansible | nginx                      : ok=4    changed=3    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-08-07 01:34:16,205 p=2465 u=root n=ansible | PLAY [This playbook will create an user] **************************************************************
+2021-08-07 01:34:16,216 p=2465 u=root n=ansible | TASK [Gathering Facts] ********************************************************************************
+2021-08-07 01:34:17,844 p=2465 u=root n=ansible | [DEPRECATION WARNING]: Distribution Ubuntu 18.04 on host nginx should use /usr/bin/python3, but is 
+using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release
+ will default to using the discovered platform python for this host. See 
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more 
+information. This feature will be removed in version 2.12. Deprecation warnings can be disabled by 
+setting deprecation_warnings=False in ansible.cfg.
+2021-08-07 01:34:17,844 p=2465 u=root n=ansible | ok: [nginx]
+2021-08-07 01:34:18,021 p=2465 u=root n=ansible | ok: [apache]
+2021-08-07 01:34:18,031 p=2465 u=root n=ansible | TASK [To create an user named jenkin] *****************************************************************
+2021-08-07 01:34:18,484 p=2465 u=root n=ansible | ok: [nginx]
+2021-08-07 01:34:18,564 p=2465 u=root n=ansible | ok: [apache]
+2021-08-07 01:34:18,575 p=2465 u=root n=ansible | TASK [clone the git repo] *****************************************************************************
+2021-08-07 01:34:19,181 p=2465 u=root n=ansible | ok: [nginx]
+2021-08-07 01:34:19,244 p=2465 u=root n=ansible | ok: [apache]
+2021-08-07 01:34:19,256 p=2465 u=root n=ansible | TASK [add alternative remote] *************************************************************************
+2021-08-07 01:34:19,658 p=2465 u=root n=ansible | ok: [nginx]
+2021-08-07 01:34:19,724 p=2465 u=root n=ansible | ok: [apache]
+2021-08-07 01:34:19,737 p=2465 u=root n=ansible | TASK [push the repo to alternate remote] **************************************************************
+2021-08-07 01:34:20,153 p=2465 u=root n=ansible | fatal: [nginx]: FAILED! => {"changed": true, "cmd": "git --verbose --git-dir=/opt/user.git/.git push origin master", "delta": "0:00:00.003761", "end": "2021-08-07 01:34:20.127679", "msg": "non-zero return code", "rc": 129, "start": "2021-08-07 01:34:20.123918", "stderr": "unknown option: --verbose\nusage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]", "stderr_lines": ["unknown option: --verbose", "usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]", "           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]", "           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]", "           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]", "           <command> [<args>]"], "stdout": "", "stdout_lines": []}
+2021-08-07 01:34:20,214 p=2465 u=root n=ansible | fatal: [apache]: FAILED! => {"changed": true, "cmd": "git --verbose --git-dir=/opt/user.git/.git push origin master", "delta": "0:00:00.003446", "end": "2021-08-07 01:34:20.181571", "msg": "non-zero return code", "rc": 129, "start": "2021-08-07 01:34:20.178125", "stderr": "unknown option: --verbose\nusage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]", "stderr_lines": ["unknown option: --verbose", "usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]", "           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]", "           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]", "           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]", "           <command> [<args>]"], "stdout": "", "stdout_lines": []}
+2021-08-07 01:34:20,217 p=2465 u=root n=ansible | PLAY RECAP ********************************************************************************************
+2021-08-07 01:34:20,218 p=2465 u=root n=ansible | apache                     : ok=4    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-08-07 01:34:20,218 p=2465 u=root n=ansible | nginx                      : ok=4    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-08-07 01:52:33,983 p=2643 u=root n=ansible | PLAY [apache] ******************************************************************
+2021-08-07 01:52:33,996 p=2643 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2021-08-07 01:52:35,834 p=2643 u=root n=ansible | ok: [apache]
+2021-08-07 01:52:35,846 p=2643 u=root n=ansible | TASK [install apache] **********************************************************
+2021-08-07 01:52:43,625 p=2643 u=root n=ansible | changed: [apache]
+2021-08-07 01:52:43,637 p=2643 u=root n=ansible | TASK [apache : copying html] ***************************************************
+2021-08-07 01:52:44,423 p=2643 u=root n=ansible | ok: [apache]
+2021-08-07 01:52:44,436 p=2643 u=root n=ansible | TASK [apache : start service] **************************************************
+2021-08-07 01:52:45,203 p=2643 u=root n=ansible | fatal: [apache]: FAILED! => {"changed": false, "msg": "Unable to start service apache2: Job for apache2.service failed because the control process exited with error code.\nSee \"systemctl status apache2.service\" and \"journalctl -xe\" for details.\n"}
+2021-08-07 01:52:45,206 p=2643 u=root n=ansible | PLAY RECAP *********************************************************************
+2021-08-07 01:52:45,207 p=2643 u=root n=ansible | apache                     : ok=3    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-08-09 10:35:15,181 p=1918 u=root n=ansible | PLAY [nginx] *******************************************************************
+2021-08-09 10:35:15,212 p=1918 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2021-08-09 10:35:16,993 p=1918 u=root n=ansible | [DEPRECATION WARNING]: Distribution Ubuntu 18.04 on host nginx should use 
+/usr/bin/python3, but is using /usr/bin/python for backward compatibility with 
+prior Ansible releases. A future Ansible release will default to using the 
+discovered platform python for this host. See https://docs.ansible.com/ansible/
+2.9/reference_appendices/interpreter_discovery.html for more information. This 
+feature will be removed in version 2.12. Deprecation warnings can be disabled 
+by setting deprecation_warnings=False in ansible.cfg.
+2021-08-09 10:35:16,993 p=1918 u=root n=ansible | ok: [nginx]
+2021-08-09 10:35:17,024 p=1918 u=root n=ansible | TASK [install nginx] ***********************************************************
+2021-08-09 10:35:17,990 p=1918 u=root n=ansible | ok: [nginx]
+2021-08-09 10:35:18,003 p=1918 u=root n=ansible | TASK [nginx : configuration] ***************************************************
+2021-08-09 10:35:18,631 p=1918 u=root n=ansible | ok: [nginx]
+2021-08-09 10:35:18,644 p=1918 u=root n=ansible | TASK [nginx : start service] ***************************************************
+2021-08-09 10:35:19,204 p=1918 u=root n=ansible | ok: [nginx]
+2021-08-09 10:35:19,208 p=1918 u=root n=ansible | PLAY RECAP *********************************************************************
+2021-08-09 10:35:19,208 p=1918 u=root n=ansible | nginx                      : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

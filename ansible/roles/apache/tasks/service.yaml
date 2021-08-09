@@ -1,0 +1,4 @@
+---
+- name: start service
+  become: true
+  service: name=apache2 state=started

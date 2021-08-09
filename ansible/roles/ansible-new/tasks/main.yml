@@ -1,0 +1,5 @@
+---
+# tasks file for ansible-new
+- include: install.yaml
+- include: config.yaml
+- include: service.yaml
