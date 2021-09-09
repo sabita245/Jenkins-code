@@ -16,7 +16,7 @@
      - name: To copy war file
        copy:
          src: /root/.jenkins/workspace/freestyle_petclinic/target/petclinic.war
-         dest: /opt/apache-tomcat-8.5.70/webapps/
+         dest: /root/apache-tomcat-8.5.70/webapps/
 
      - name: To START apache tomcat
        shell: nohup /root/apache-tomcat-8.5.70/bin/catalina.sh start
